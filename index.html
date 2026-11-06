@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CETPRO "José Gras y Granollers" - Colasay</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0B192C',
+                            dark: '#070F1B',
+                            light: '#1E3E62',
+                        },
+                        baby: {
+                            DEFAULT: '#A0C4FF',
+                            light: '#E8F1FF',
+                            soft: '#C4DDFF',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E3E62;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0B192C;
+        }
+        .hero-pattern {
+            background-color: #0B192C;
+            background-image: radial-gradient(#1E3E62 1px, transparent 1px), radial-gradient(#1E3E62 1px, #0B192C 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen selection:bg-baby selection:text-navy">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-navy-dark text-slate-200 text-xs py-2 px-4 border-b border-navy-light/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-graduation-cap text-baby mr-1"></i> Admisión Abierta</span>
+                <span class="hidden md:inline text-slate-400">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-certificate text-baby mr-1"></i> Certificación Oficial al Nombre del Ministerio de Educación</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/51935006273?text=Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20programas%20de%20estudio" target="_blank" class="hover:text-baby transition-colors flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp text-green-400 text-sm"></i> +51 935 006 273
+                </a>
+                <span class="hidden sm:inline"><i class="fa-solid fa-clock text-baby mr-1"></i> Lun - Vie: 8:00 AM - 6:00 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-navy/95 backdrop-blur-md text-white shadow-lg transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-white p-1 flex items-center justify-center shadow-md shadow-baby/20 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                        <img src="LOGO_2.png" alt="Logo CETPRO José Gras y Granollers" class="w-full h-full object-contain" onerror="this.onerror=null; this.parentNode.innerHTML='<i class=\"fa-solid fa-graduation-cap text-navy text-2xl\"></i>';">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-base sm:text-lg tracking-tight text-white leading-tight">CETPRO "JOSÉ GRAS Y GRANOLLERS"</span>
+                        <span class="text-xs tracking-widest text-baby font-bold uppercase">COLASAY</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2">
+                    <a href="#inicio" class="px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-baby hover:bg-white/5 transition-all">Inicio</a>
+                    <a href="#programas" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-baby hover:bg-white/5 transition-all">Programas de Estudio</a>
+                    <a href="#ventajas" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-baby hover:bg-white/5 transition-all">Beneficios</a>
+                    <a href="#orientacion" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-baby hover:bg-white/5 transition-all">Test Vocacional</a>
+                    <a href="#faq" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-baby hover:bg-white/5 transition-all">Preguntas</a>
+                    <a href="#contacto" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-baby hover:bg-white/5 transition-all">Contacto</a>
+                </nav>
+
+                <!-- CTA Button Desktop -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="https://wa.me/51935006273?text=Hola,%20deseo%20consultar%20sobre%20las%20matriculas%20abiertas" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-xl shadow-md shadow-emerald-500/20 hover:shadow-lg transition-all transform hover:-translate-y-0.5 text-sm flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Consultar WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex lg:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-baby" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-dark border-b border-navy-light/50 px-4 pt-2 pb-6 space-y-2">
+            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-navy-light">Inicio</a>
+            <a href="#programas" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-light">Programas de Estudio</a>
+            <a href="#ventajas" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-light">Beneficios</a>
+            <a href="#orientacion" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-light">Test Vocacional</a>
+            <a href="#faq" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-light">Preguntas Frecuentes</a>
+            <a href="#contacto" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-light">Contacto</a>
+            <div class="pt-3 border-t border-navy-light">
+                <a href="https://wa.me/51935006273?text=Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20matriculas" target="_blank" class="w-full bg-emerald-500 text-white font-bold py-3 rounded-xl shadow text-center hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero-pattern relative text-white py-16 lg:py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-navy-light/80 border border-baby/30 text-baby text-xs font-semibold uppercase tracking-wider shadow-inner">
+                        <span class="w-2 h-2 rounded-full bg-baby animate-ping"></span>
+                        Inscripciones Abiertas - Colasay
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        Impulsa tu Futuro Profesional con <span class="text-transparent bg-clip-text bg-gradient-to-r from-baby via-white to-baby-soft">Formación Técnica Práctica Productiva</span>
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Aprende una carrera técnica productiva en 2 años con alta demanda laboral en corto tiempo. Certificación oficial a nombre del CETPRO y a nombre del Ministerio de Educación con módulos 100% prácticos y equipamiento moderno.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#programas" class="bg-baby hover:bg-baby-soft text-navy font-bold px-8 py-4 rounded-xl shadow-lg shadow-baby/20 hover:shadow-baby/40 transition-all text-center flex items-center justify-center gap-2 text-base">
+                            <i class="fa-solid fa-graduation-cap"></i> Ver Programas de Estudio
+                        </a>
+                        <a href="https://wa.me/51935006273?text=Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20matriculas%20en%20el%20CETPRO" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-600/30 transition-all text-center flex items-center justify-center gap-2 text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Contactar por WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Key stats inside Hero -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-700/60 max-w-lg mx-auto lg:mx-0 text-center">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-baby">5</span>
+                            <span class="text-xs text-slate-400 font-medium">Programas de Estudio</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-baby">2 Años</span>
+                            <span class="text-xs text-slate-400 font-medium">Formación Técnica</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-baby">100%</span>
+                            <span class="text-xs text-slate-400 font-medium">Práctico y Oficial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-baby via-navy-light to-baby opacity-30 blur-xl"></div>
+                        
+                        <div class="relative bg-navy-light/40 border border-slate-700/80 rounded-2xl p-4 sm:p-6 shadow-2xl backdrop-blur-sm">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Talleres Prácticos CETPRO José Gras y Granollers" 
+                                 class="rounded-xl w-full h-64 sm:h-80 object-cover shadow-inner mb-4"
+                                 onerror="this.src='https://placehold.co/600x400/0B192C/A0C4FF?text=CETPRO+Jose+Gras+y+Granollers'">
+                            
+                            <div class="bg-navy/90 p-4 rounded-xl border border-slate-700 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-baby/20 text-baby flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-award"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-400">Garantía Educativa</p>
+                                        <p class="text-sm font-bold text-white">Certificación Oficial MINEDU</p>
+                                    </div>
+                                </div>
+                                <span class="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-1 rounded-md font-semibold border border-emerald-500/30">Valor Oficial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM SEARCH & COURSES SECTION -->
+    <section id="programas" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-navy-light font-bold text-sm tracking-wider uppercase bg-baby-light px-3 py-1 rounded-full border border-baby/40">Oferta Educativa</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">Programas de Estudio</h2>
+                <p class="text-slate-600 text-base">Carreras técnicas productivas de corta duración con alta inserción laboral y enfoque práctico emprendedor.</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-md border border-slate-200/80 mb-10">
+                <div class="relative max-w-2xl mx-auto">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="course-search" placeholder="Buscar programa de estudio (ej. Informática, Alimentos, Textil, Cosmetología...)" 
+                           class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:border-navy focus:ring-2 focus:ring-baby outline-none text-slate-700 text-sm transition-all">
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-grid">
+                <!-- Content Populated via JavaScript -->
+            </div>
+
+            <!-- Empty State Search Result -->
+            <div id="no-results" class="hidden text-center py-12 bg-white rounded-2xl border border-dashed border-slate-300">
+                <i class="fa-solid fa-folder-open text-4xl text-slate-300 mb-3"></i>
+                <h3 class="text-lg font-bold text-slate-700">No se encontraron programas</h3>
+                <p class="text-slate-500 text-sm">Intenta ajustar tu búsqueda para encontrar la especialidad deseada.</p>
+                <button onclick="resetFilters()" class="mt-4 text-xs font-bold text-navy hover:text-navy-light underline">Restablecer Búsqueda</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US / BENEFITS -->
+    <section id="ventajas" class="py-16 sm:py-24 bg-navy text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-baby font-bold text-xs uppercase tracking-widest bg-navy-light px-3 py-1 rounded-full border border-baby/30">Ventajas Institucionales</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">¿Por Qué Estudiar en el CETPRO José Gras y Granollers?</h2>
+                <p class="text-slate-300 text-base">Formación orientada a la práctica, emprendimiento y desarrollo productivo para la región.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-navy-light/40 border border-slate-700/60 p-6 rounded-2xl hover:border-baby/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-baby/20 text-baby flex items-center justify-center text-xl mb-4 font-bold">
+                        <i class="fa-solid fa-screwdrivers-full"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Módulos 100% Prácticos</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Aprendizaje enfocado en talleres equipados con materiales y herramientas de nivel profesional.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-navy-light/40 border border-slate-700/60 p-6 rounded-2xl hover:border-baby/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-baby/20 text-baby flex items-center justify-center text-xl mb-4 font-bold">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Formación Rápida</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Capacitación técnica completa en 2 años con alta demanda en el mercado laboral.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-navy-light/40 border border-slate-700/60 p-6 rounded-2xl hover:border-baby/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-baby/20 text-baby flex items-center justify-center text-xl mb-4 font-bold">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Impulso al Emprendimiento</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Capacitación diseñada para que crees tu propio negocio productivo de manera independiente.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="bg-navy-light/40 border border-slate-700/60 p-6 rounded-2xl hover:border-baby/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-baby/20 text-baby flex items-center justify-center text-xl mb-4 font-bold">
+                        <i class="fa-solid fa-file-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Certificación Oficial</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Títulos a nombre del CETPRO y respaldados oficialmente por el Ministerio de Educación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORIENTATION TEST / QUIZ -->
+    <section id="orientacion" class="py-16 sm:py-20 bg-gradient-to-b from-slate-50 to-baby-light/40">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-10 relative overflow-hidden">
+                <div class="absolute -right-12 -top-12 w-40 h-40 bg-baby/20 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="text-navy font-bold text-xs uppercase tracking-wider bg-baby-light px-3 py-1 rounded-full">Test Vocacional</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-navy mt-2">¿No estás seguro de qué programa elegir?</h2>
+                    <p class="text-slate-600 text-sm mt-1">Responde 2 preguntas sencillas y te recomendaremos la especialidad perfecta para ti.</p>
+                </div>
+
+                <!-- Interactive Quiz Container -->
+                <div id="quiz-container" class="space-y-6">
+                    <!-- Step 1 -->
+                    <div id="quiz-step-1" class="space-y-4">
+                        <label class="block font-bold text-navy text-sm sm:text-base">1. ¿Qué tipo de área de trabajo te llama más la atención?</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button onclick="setQuizAnswer('ti')" class="quiz-opt p-4 rounded-xl border border-slate-200 hover:border-navy hover:bg-baby-light/50 text-left transition-all text-sm font-medium text-slate-700 flex items-center gap-3">
+                                <i class="fa-solid fa-laptop-code text-navy"></i> Tecnología, sistemas y computación
+                            </button>
+                            <button onclick="setQuizAnswer('organica')" class="quiz-opt p-4 rounded-xl border border-slate-200 hover:border-navy hover:bg-baby-light/50 text-left transition-all text-sm font-medium text-slate-700 flex items-center gap-3">
+                                <i class="fa-solid fa-seedling text-navy"></i> Cultivos ecológicos y diversificación
+                            </button>
+                            <button onclick="setQuizAnswer('alimentos')" class="quiz-opt p-4 rounded-xl border border-slate-200 hover:border-navy hover:bg-baby-light/50 text-left transition-all text-sm font-medium text-slate-700 flex items-center gap-3">
+                                <i class="fa-solid fa-utensils text-navy"></i> Transformación alimentaria y repostería
+                            </button>
+                            <button onclick="setQuizAnswer('textil')" class="quiz-opt p-4 rounded-xl border border-slate-200 hover:border-navy hover:bg-baby-light/50 text-left transition-all text-sm font-medium text-slate-700 flex items-center gap-3">
+                                <i class="fa-solid fa-scissors text-navy"></i> Diseño, costura y producción textil
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div id="quiz-step-2" class="hidden space-y-4">
+                        <label class="block font-bold text-navy text-sm sm:text-base">2. ¿Cuál es tu meta principal al egresar?</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button onclick="calculateQuizResult('trabajo')" class="quiz-opt p-4 rounded-xl border border-slate-200 hover:border-navy hover:bg-baby-light/50 text-left transition-all text-sm font-medium text-slate-700 flex items-center gap-3">
+                                <i class="fa-solid fa-briefcase text-navy"></i> Trabajar en una empresa o institución
+                            </button>
+                            <button onclick="calculateQuizResult('negocio')" class="quiz-opt p-4 rounded-xl border border-slate-200 hover:border-navy hover:bg-baby-light/50 text-left transition-all text-sm font-medium text-slate-700 flex items-center gap-3">
+                                <i class="fa-solid fa-store text-navy"></i> Iniciar mi propio emprendimiento
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Result View -->
+                    <div id="quiz-result" class="hidden text-center py-6 space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy">¡Tu Programa Ideal Identificado!</h3>
+                        <p class="text-slate-600 text-sm">Según tus respuestas, la especialidad recomendada es:</p>
+                        <div id="quiz-recommended-card" class="p-4 bg-slate-50 border border-slate-200 rounded-xl max-w-md mx-auto font-bold text-navy"></div>
+                        <div class="pt-2 flex justify-center gap-3">
+                            <button onclick="resetQuiz()" class="px-4 py-2 text-xs font-semibold text-slate-500 hover:text-slate-800">Repetir Test</button>
+                            <button onclick="openEnrollmentModal()" class="px-5 py-2.5 bg-navy hover:bg-navy-light text-white text-xs font-bold rounded-xl shadow">Pre-inscribirme Ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="text-navy-light font-bold text-xs uppercase tracking-wider bg-baby-light px-3 py-1 rounded-full">Resuelve tus Dudas</span>
+                <h2 class="text-3xl font-extrabold text-navy">Preguntas Frecuentes</h2>
+                <p class="text-slate-600 text-sm">Información sobre admisión, certificación y metodología.</p>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-5 text-left font-bold text-navy text-sm sm:text-base flex justify-between items-center bg-slate-50 hover:bg-slate-100/80 transition-colors">
+                        <span>¿Cuáles son los requisitos de matrícula?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 text-slate-600 text-sm bg-white border-t border-slate-100 leading-relaxed">
+                        Copia de DNI, ficha de matrícula completada y compromiso de asistencia a los módulos prácticos.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-5 text-left font-bold text-navy text-sm sm:text-base flex justify-between items-center bg-slate-50 hover:bg-slate-100/80 transition-colors">
+                        <span>¿Los certificados son oficiales?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 text-slate-600 text-sm bg-white border-t border-slate-100 leading-relaxed">
+                        Sí, los títulos y certificados modulares son emitidos a nombre del CETPRO y a nombre del Ministerio de Educación (MINEDU).
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-5 text-left font-bold text-navy text-sm sm:text-base flex justify-between items-center bg-slate-50 hover:bg-slate-100/80 transition-colors">
+                        <span>¿Cuánto tiempo duran los programas?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 text-slate-600 text-sm bg-white border-t border-slate-100 leading-relaxed">
+                        Nuestras carreras técnicas productivas están estructuradas para completarse en 2 años académicos organizados por módulos prácticos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-navy-light font-bold text-xs uppercase tracking-wider bg-baby-light px-3 py-1 rounded-full">Atención Directa</span>
+                        <h2 class="text-3xl font-extrabold text-navy mt-3">Contáctanos en Colasay</h2>
+                        <p class="text-slate-600 text-sm mt-2">Visítanos en nuestra sede o comunícate vía WhatsApp para resolver cualquier consulta sobre nuestras matrículas.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-200/80">
+                            <div class="w-10 h-10 rounded-xl bg-baby-light text-navy flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy text-sm">Ubicación Institucional</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">Sede Principal - Distrito de Colasay</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-200/80">
+                            <div class="w-10 h-10 rounded-xl bg-baby-light text-navy flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy text-sm">Teléfono / WhatsApp</h4>
+                                <a href="https://wa.me/51935006273?text=Hola,%20deseo%20realizar%20una%20consulta" target="_blank" class="text-emerald-600 font-bold hover:underline text-sm block mt-0.5">
+                                    <i class="fa-brands fa-whatsapp"></i> +51 935 006 273
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-200/80">
+                            <div class="w-10 h-10 rounded-xl bg-baby-light text-navy flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy text-sm">Horario de Atención</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-200/80 relative">
+                        <h3 class="text-xl font-bold text-navy mb-6">Envíanos un Mensaje</h3>
+                        
+                        <form id="contact-form" class="space-y-4" onsubmit="handleContactSubmit(event)">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Nombre Completo *</label>
+                                    <input type="text" id="contact-name" required placeholder="Ej. Juan Pérez" 
+                                           class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-baby focus:border-navy outline-none text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Teléfono / WhatsApp *</label>
+                                    <input type="tel" id="contact-phone" required placeholder="Ej. 935006273" 
+                                           class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-baby focus:border-navy outline-none text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Programa de Interés</label>
+                                <select id="contact-course" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-baby focus:border-navy outline-none text-sm bg-white">
+                                    <option value="Plataformas y Servicios de Tecnologia de la Informacion">Plataformas y servicios de Tecnologia de la Informacion</option>
+                                    <option value="Produccion Organica y Diversificacion productiva">Produccion Organica y Diversificacion productiva</option>
+                                    <option value="Elaboracion de productos Alimentarios">Elaboracion de productos Alimentarios</option>
+                                    <option value="Confección Textil">Confección Textil</option>
+                                    <option value="Cosmetologia">Cosmetologia</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Mensaje o Consulta</label>
+                                <textarea id="contact-message" rows="4" placeholder="Escribe aquí tu consulta..." 
+                                          class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-baby focus:border-navy outline-none text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" id="contact-submit-btn" class="w-full bg-navy hover:bg-navy-light text-white font-bold py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje por WhatsApp
+                            </button>
+                        </form>
+
+                        <div id="contact-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
+                            <div>
+                                <strong class="block font-bold">¡Mensaje Redirigido!</strong>
+                                <span>Te estamos conectando con un asesor por WhatsApp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/51935006273?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20los%20programas%20de%20estudio" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-110 group animate-bounce"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl sm:text-4xl"></i>
+        <span class="absolute right-16 bg-navy text-white text-xs font-bold py-1.5 px-3 rounded-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none">
+            ¡Escríbenos al 935 006 273!
+        </span>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-dark text-slate-400 py-12 border-t border-navy-light/40 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-white p-1 flex items-center justify-center font-bold">
+                            <img src="LOGO_2.png" alt="Logo" class="w-full h-full object-contain" onerror="this.onerror=null; this.parentNode.innerHTML='<i class=\"fa-solid fa-graduation-cap text-navy\"></i>';">
+                        </div>
+                        <span class="font-bold text-white text-base">CETPRO José Gras y Granollers</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Centro de Educación Técnica Productiva - Colasay. Formando profesionales técnicos altamente capacitados para el mercado productivo.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 border-l-2 border-baby pl-2">Secciones</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#inicio" class="hover:text-baby transition-colors">Inicio</a></li>
+                        <li><a href="#programas" class="hover:text-baby transition-colors">Programas de Estudio</a></li>
+                        <li><a href="#ventajas" class="hover:text-baby transition-colors">Beneficios</a></li>
+                        <li><a href="#orientacion" class="hover:text-baby transition-colors">Test Vocacional</a></li>
+                        <li><a href="#contacto" class="hover:text-baby transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Programs -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 border-l-2 border-baby pl-2">Programas</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#programas" class="hover:text-baby transition-colors">Tecnología de la Información</a></li>
+                        <li><a href="#programas" class="hover:text-baby transition-colors">Producción Orgánica</a></li>
+                        <li><a href="#programas" class="hover:text-baby transition-colors">Productos Alimentarios</a></li>
+                        <li><a href="#programas" class="hover:text-baby transition-colors">Confección Textil</a></li>
+                        <li><a href="#programas" class="hover:text-baby transition-colors">Cosmetología</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Horarios -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 border-l-2 border-baby pl-2">Atención</h4>
+                    <p class="text-xs text-slate-400 mb-2">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                    <span class="inline-block px-2.5 py-1 rounded bg-navy-light/80 text-baby text-[10px] font-semibold border border-baby/20">Certificación Oficial MINEDU</span>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+                <p>&copy; CETPRO "José Gras y Granollers" - Colasay. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COURSE DETAIL & ENROLLMENT MODAL -->
+    <div id="course-modal" class="fixed inset-0 z-50 hidden bg-navy-dark/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-slate-100 my-8 transform transition-all" onclick="event.stopPropagation()">
+            
+            <!-- Modal Header -->
+            <div class="bg-navy text-white p-6 relative">
+                <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-300 hover:text-white w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <span id="modal-category" class="text-xs font-bold uppercase tracking-wider text-baby bg-navy-light px-2.5 py-1 rounded-md">Programa Técnico</span>
+                <h3 id="modal-title" class="text-2xl font-extrabold text-white mt-2">Nombre del Programa</h3>
+                <p id="modal-duration" class="text-xs text-slate-300 mt-1"><i class="fa-regular fa-clock mr-1"></i> Duración: 2 Años</p>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 space-y-6 max-h-[70vh] overflow-y-auto">
+                <div>
+                    <h4 class="font-bold text-navy text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-baby"></i> Módulos Prácticos
+                    </h4>
+                    <ul id="modal-modules" class="space-y-2 text-xs sm:text-sm text-slate-600"></ul>
+                </div>
+
+                <hr class="border-slate-200">
+
+                <!-- Pre-enrollment Quick Form -->
+                <div>
+                    <h4 class="font-bold text-navy text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-user-plus text-baby"></i> Formulario de Pre-Inscripción
+                    </h4>
+                    <p class="text-xs text-slate-500 mb-4">Envía tus datos directamente a WhatsApp para coordinar tu vacante.</p>
+
+                    <form id="modal-enroll-form" onsubmit="handleEnrollSubmit(event)" class="space-y-3">
+                        <input type="hidden" id="modal-course-input">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <input type="text" required id="enroll-name" placeholder="Nombres y Apellidos *" class="px-3 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-baby outline-none">
+                            <input type="tel" required id="enroll-phone" placeholder="Celular / WhatsApp *" class="px-3 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-baby outline-none">
+                        </div>
+                        <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl shadow transition-all text-xs flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Enviar Pre-Inscripción por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const coursesData = [
+            {
+                id: 'ti',
+                title: 'Plataformas y Servicios de Tecnología de la Información',
+                icon: 'fa-laptop-code',
+                duration: '2 Años',
+                modality: 'Módulos 100% Prácticos',
+                certificate: 'Oficial MINEDU / CETPRO',
+                image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80',
+                description: 'Aprende soporte técnico, mantenimiento de equipos, diseño web, administración de redes y desarrollo de plataformas digitales.',
+                modules: [
+                    'Soporte Técnico y Mantenimiento de Hardware',
+                    'Redes Locales y Conectividad',
+                    'Plataformas Web y Gestión de Datos'
+                ]
+            },
+            {
+                id: 'organica',
+                title: 'Producción Orgánica y Diversificación Productiva',
+                icon: 'fa-seedling',
+                duration: '2 Años',
+                modality: 'Módulos 100% Prácticos',
+                certificate: 'Oficial MINEDU / CETPRO',
+                image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80',
+                description: 'Técnicas agrícolas ecológicas, gestión de cultivos orgánicos sostenibles e innovación en diversificación de productos.',
+                modules: [
+                    'Técnicas de Cultivo Orgánico y Biofertilizantes',
+                    'Manejo Ecológico de Plagas',
+                    'Diversificación Productiva Comercial'
+                ]
+            },
+            {
+                id: 'alimentos',
+                title: 'Elaboración de Productos Alimentarios',
+                icon: 'fa-utensils',
+                duration: '2 Años',
+                modality: 'Módulos 100% Prácticos',
+                certificate: 'Oficial MINEDU / CETPRO',
+                image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80',
+                description: 'Procesamiento de alimentos, panadería, repostería, conservación de productos locales e higiene industrial.',
+                modules: [
+                    'Procesamiento y Conservación de Alimentos',
+                    'Panadería y Repostería Técnica',
+                    'Control de Calidad e Higiene Alimentaria'
+                ]
+            },
+            {
+                id: 'textil',
+                title: 'Confección Textil',
+                icon: 'fa-scissors',
+                duration: '2 Años',
+                modality: 'Módulos 100% Prácticos',
+                certificate: 'Oficial MINEDU / CETPRO',
+                image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80',
+                description: 'Patronaje industrial, costura con maquinaria avanzada, confección de prendas y acabado textil para emprendimiento.',
+                modules: [
+                    'Operatividad de Máquinas Industriales',
+                    'Patronaje y Ensamblaje de Prendas',
+                    'Control de Calidad y Acabados Textiles'
+                ]
+            },
+            {
+                id: 'cosmetologia',
+                title: 'Cosmetología',
+                icon: 'fa-wand-magic-sparkles',
+                duration: '2 Años',
+                modality: 'Módulos 100% Prácticos',
+                certificate: 'Oficial MINEDU / CETPRO',
+                image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80',
+                description: 'Corte de cabello, colorimetría, tratamiento capilar, peinados, manicure, pedicure y estética integral profesional.',
+                modules: [
+                    'Tratamientos Capilares y Peinados',
+                    'Colorimetría y Tinturación',
+                    'Manicure, Pedicure y Estética Facial'
+                ]
+            }
+        ];
+
+        function renderCourses(filteredCourses) {
+            const grid = document.getElementById('courses-grid');
+            const noResults = document.getElementById('no-results');
+            grid.innerHTML = '';
+
+            if (filteredCourses.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            filteredCourses.forEach(course => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group';
+                
+                const waMessage = encodeURIComponent(`Hola, deseo consultar sobre el programa de ${course.title}`);
+
+                card.innerHTML = `
+                    <div class="relative overflow-hidden h-48 bg-navy-light">
+                        <img src="${course.image}" alt="${course.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-navy/90 backdrop-blur-md text-baby text-[11px] font-extrabold px-3 py-1 rounded-full border border-baby/20 shadow">
+                            <i class="fa-solid ${course.icon} mr-1"></i> Carrera Técnica
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-navy group-hover:text-navy-light transition-colors">${course.title}</h3>
+                            <p class="text-xs text-slate-500 mt-2 leading-relaxed">${course.description}</p>
+                            
+                            <div class="mt-4 pt-3 border-t border-slate-100 space-y-1.5 text-xs text-slate-600">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-regular fa-clock text-navy-light w-4"></i>
+                                    <span><strong>Duración:</strong> ${course.duration}</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-graduation-cap text-navy-light w-4"></i>
+                                    <span><strong>Certificación:</strong> ${course.certificate}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openModal('${course.id}')" class="w-full bg-slate-100 hover:bg-navy hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition-all text-xs flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-list-check"></i> Detalle
+                            </button>
+                            <a href="https://wa.me/51935006273?text=${waMessage}" target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl transition-all text-xs flex items-center justify-center gap-1">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        const searchInput = document.getElementById('course-search');
+
+        function filterCourses() {
+            const query = searchInput.value.toLowerCase().trim();
+            const filtered = coursesData.filter(course => {
+                return course.title.toLowerCase().includes(query) || course.description.toLowerCase().includes(query);
+            });
+            renderCourses(filtered);
+        }
+
+        function resetFilters() {
+            searchInput.value = '';
+            filterCourses();
+        }
+
+        searchInput.addEventListener('input', filterCourses);
+
+        // Modal Controls
+        const modal = document.getElementById('course-modal');
+
+        function openModal(courseId) {
+            const course = coursesData.find(c => c.id === courseId) || coursesData[0];
+            
+            document.getElementById('modal-title').textContent = course.title;
+            document.getElementById('modal-duration').innerHTML = `<i class="fa-regular fa-clock mr-1"></i> Duración: ${course.duration}`;
+            document.getElementById('modal-course-input').value = course.title;
+
+            const modulesList = document.getElementById('modal-modules');
+            modulesList.innerHTML = '';
+            course.modules.forEach(mod => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100';
+                li.innerHTML = `<i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> <span>${mod}</span>`;
+                modulesList.appendChild(li);
+            });
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openEnrollmentModal() {
+            openModal(coursesData[0].id);
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        modal.addEventListener('click', closeModal);
+
+        function handleEnrollSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('enroll-name').value;
+            const phone = document.getElementById('enroll-phone').value;
+            const course = document.getElementById('modal-course-input').value;
+
+            const msg = encodeURIComponent(`Hola, mi nombre es ${name} (Tel: ${phone}). Deseo pre-inscribirme en el programa de ${course}.`);
+            window.open(`https://wa.me/51935006273?text=${msg}`, '_blank');
+            closeModal();
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const course = document.getElementById('contact-course').value;
+            const message = document.getElementById('contact-message').value;
+
+            const waMessage = encodeURIComponent(`Hola CETPRO José Gras y Granollers, mi nombre es ${name}.\nTeléfono: ${phone}\nPrograma de interés: ${course}\nConsulta: ${message}`);
+            
+            document.getElementById('contact-success').classList.remove('hidden');
+            setTimeout(() => {
+                window.open(`https://wa.me/51935006273?text=${waMessage}`, '_blank');
+                document.getElementById('contact-form').reset();
+            }, 800);
+        }
+
+        // Quiz Logic
+        let quizAnswers = {};
+
+        function setQuizAnswer(val) {
+            quizAnswers['area'] = val;
+            document.getElementById('quiz-step-1').classList.add('hidden');
+            document.getElementById('quiz-step-2').classList.remove('hidden');
+        }
+
+        function calculateQuizResult(obj) {
+            quizAnswers['obj'] = obj;
+            document.getElementById('quiz-step-2').classList.add('hidden');
+            
+            const area = quizAnswers['area'];
+            const recCourse = coursesData.find(c => c.id === area) || coursesData[0];
+
+            document.getElementById('quiz-recommended-card').innerHTML = `
+                <i class="fa-solid ${recCourse.icon} text-xl text-navy mr-2"></i> ${recCourse.title}
+            `;
+            document.getElementById('quiz-result').classList.remove('hidden');
+        }
+
+        function resetQuiz() {
+            quizAnswers = {};
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-step-2').classList.add('hidden');
+            document.getElementById('quiz-step-1').classList.remove('hidden');
+        }
+
+        // Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                const isOpen = !content.classList.contains('hidden');
+
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // Initial render
+        window.addEventListener('DOMContentLoaded', () => renderCourses(coursesData));
+    </script>
+</body>
+</html>
